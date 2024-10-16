@@ -9,43 +9,29 @@ redirect_from:
 
 {% include base_path %}
 
+Full version 
+=====
+* Click here for CV. 
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* 2025 (expected): Ph.D in Department of Astronomy, Peking University, China
+* 2019: B.S. in Department of Astronomy, Peking University, China
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
   
-Skills
+Research Interests
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* observational astronomy on extragalactic objects
+  * High-redshift quasars and Cosmic Reionization
+  * Supermassive Black Hole and its host galaxy
+  * Low-redshift (1<z<3) Quasars and AGNs
+* Data Mining and Machine Learning
 
-Publications
+Publications 
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+ * h index: 8
+ * Total citations: >700
+ * Number of refereed publications: 17
   
 Talks
 ======
@@ -53,12 +39,4 @@ Talks
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
