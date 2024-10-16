@@ -31,7 +31,7 @@ Publications
 ======
  * h index: 8
  * Total citations: >700
- * Number of refereed publications: 17
+ * Number of publications: 17
   
 Collaboration
 ======
@@ -40,7 +40,7 @@ Collaboration
 * JWST+ALMA ASPIRE collaboration ([Link](https://aspire-quasar.github.io/)): Member
 * China Space Station Telescope (CSST) PKU Science Center: Member
 
-* Awards and Honors
+Awards and Honors
 ======
 * 2020-2021: The President’s PhD Scholarship (校长奖学金, top 5% Ph. D student in PKU) and Merit Student (校三好学生)
 * 2021-2022: The President’s PhD Scholarship, the First Price Scholarship (校一等奖), and Merit Student
