@@ -11,7 +11,7 @@ redirect_from:
 
 Full version 
 =====
-* Click here for [CV]((../assets/Curriculum_Vitae.pdf)). 
+* Click here for [CV](../assets/Curriculum_Vitae.pdf). 
 
 Education
 ======
