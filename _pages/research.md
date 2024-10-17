@@ -27,14 +27,14 @@ Galaxies in Spectroscopic Surveys
 * Observational tests on fundamental physics: Using a dataset of 110,000 [O III] galaxies from DESI, we have studied changes in the fine-structure constant α. We measured a small α variation, ∆α/α, using the Alkali Doublet method, which may be due to wavelength calibration problems. In addition, using JWST data, we provide the first constraints on ∆α/α at the highest redshifts (3 < z < 10), finding no significant deviation from zero within a 1σ uncertainty of about 10^-4 (see [Jiang, Pan et al. 2024a](https://ui.adsabs.harvard.edu/abs/2024ApJ...968..120J/abstract) and [Jiang et al. 2024b](https://ui.adsabs.harvard.edu/abs/2024arXiv240508977J/abstract)).
 * High redshift Lyman-break galaxies (see [Fu et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240105920F/abstract))
 
-Hunting for quasars/AGNS
+Hunting for Quasars/AGNS
 =====
 * CSST preparation: quasar forecast from the slitless spectroscopy (see Pan et al. in prep)
 * PFS observations for proper motion selected quasar candidates
 * Quasars and changing look AGNs in DESI (see [Alexander et al. 2023](https://ui.adsabs.harvard.edu/abs/2023AJ....165..124A/abstract), [Guo et al. 2024](https://ui.adsabs.harvard.edu/abs/2024ApJS..270...26G/abstract), [Juneau et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240403621J/abstract) and [Guo et al. 2024b](https://ui.adsabs.harvard.edu/abs/2024arXiv240800402G/abstract))
 * Quasars/AGNs in JWST (see [Yang et al. 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...951L...5Y/abstract), [Liu et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240913189L/abstract) and [Lin et al. 2024](https://ui.adsabs.harvard.edu/abs/2024ApJ...974..147L/abstract))
 
-Physical properties of quasars and galaxies 
+Physical Properties of Quasars and Galaxies 
 =====
 * Spectro-photometric decomposition of quasar and host galaxy using HSC images and DESI spectra (see Sun et al. to be submitted)
 * SED fitting results for DESI galaxies and AGNs (see [Siudek et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240919066S/abstract))
