@@ -22,9 +22,9 @@ Education
 Research Interests
 ======
 * Observational astronomy on extragalactic objects
-  * High-redshift quasars and Cosmic Reionization
-  * Supermassive Black Hole and its host galaxy
-  * Low-redshift (1<z<3) Quasars and AGNs
+  * High-redshift quasars and cosmic reionization
+  * Supermassive black hole and its host galaxy
+  * Low-redshift (1<z<3) quasars and AGNs
 * Data mining and machine learning
 
 Publications 
