@@ -27,7 +27,7 @@ Galaxies in Spectroscopic Surveys
 * Observational tests on fundamental physics: Using a dataset of 110,000 [O III] galaxies from DESI, we have studied changes in the fine-structure constant α. We measured a small α variation, ∆α/α, using the Alkali Doublet method, which may be due to wavelength calibration problems. In addition, using JWST data, we provide the first constraints on ∆α/α at the highest redshifts (3 < z < 10), finding no significant deviation from zero within a 1σ uncertainty of about 10^-4 (see [Jiang, Pan et al. 2024a](https://ui.adsabs.harvard.edu/abs/2024ApJ...968..120J/abstract) and [Jiang et al. 2024b](https://ui.adsabs.harvard.edu/abs/2024arXiv240508977J/abstract)).
 * High redshift Lyman-break galaxies (see [Fu et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240105920F/abstract))
 
-Hunting for Quasars/AGNS
+Hunting for Quasars/AGNs
 =====
 * CSST preparation: quasar forecast from the slitless spectroscopy (see Pan et al. in prep)
 * PFS observations for proper motion selected quasar candidates
