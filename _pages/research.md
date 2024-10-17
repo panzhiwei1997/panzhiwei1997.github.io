@@ -29,8 +29,8 @@ Galaxies in Spectroscopic Surveys
 
 Hunting for quasars/AGNS
 =====
-* CSST Preparation: Quasar Forecast from Slitless Spectroscopy (see Pan et al. in prep)
-* PFS pbservations for proper motion selected quasar candidates
+* CSST preparation: quasar forecast from the slitless spectroscopy (see Pan et al. in prep)
+* PFS observations for proper motion selected quasar candidates
 * Quasars and changing look AGNs in DESI (see [Alexander et al. 2023](https://ui.adsabs.harvard.edu/abs/2023AJ....165..124A/abstract), [Guo et al. 2024](https://ui.adsabs.harvard.edu/abs/2024ApJS..270...26G/abstract), [Juneau et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240403621J/abstract) and [Guo et al. 2024b](https://ui.adsabs.harvard.edu/abs/2024arXiv240800402G/abstract))
 * Quasars/AGNs in JWST (see [Yang et al. 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...951L...5Y/abstract), [Liu et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240913189L/abstract) and [Lin et al. 2024](https://ui.adsabs.harvard.edu/abs/2024ApJ...974..147L/abstract))
 
