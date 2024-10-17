@@ -24,4 +24,4 @@ We study on the possible overestimation of single-epoch supermassive black hole 
 
 Observational Tests on Fundamental physics
 =====
-Using a dataset of 110,000 [O III] galaxies from DESI, we explored changes in the fine-structure constant α. We measured a small α variation, ∆α/α, using the Alkali Doublet method, which may be due to wavelength calibration issues. Additionally, with JWST data, we provide the first constraints on ∆α/α at the highest redshifts (3 < z < 10), finding no significant deviation from zero within a 1σ uncertainty of about 10^−4. (see Pan et al. submitted to ApJ)
+Using a dataset of 110,000 [O III] galaxies from DESI, we have studied changes in the fine-structure constant α. We measured a small α variation, ∆α/α, using the Alkali Doublet method, which may be due to wavelength calibration problems. In addition, using JWST data, we provide the first constraints on ∆α/α at the highest redshifts (3 < z < 10), finding no significant deviation from zero within a 1σ uncertainty of about 10^-4 (see Pan et al. submitted to ApJ).
