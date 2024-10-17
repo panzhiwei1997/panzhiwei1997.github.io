@@ -47,3 +47,12 @@ Awards and Honors
 * 2022-2023: Chinese National Scholarship (国家奖学金, top 1% Ph. D student in China) and Merit Student
 * 2023-2024: The First Price Scholarship and Merit Student 
 
+Talks
+======
+* May 2023: "Quasar Luminosity Function & Single-Epoch Black Hole Mass Estimation", **invited talk** at the DoA special seminar of Tsinghua University (Beijing, China)
+
+Teaching and Outreach
+======
+* September 2021 - June 2023: Co-organizer of CSST AGN & Galaxy Discussion (weekly), Peking University
+* September 2020 - Januray 2021: Teaching Assistant of the Fundamental Astronomy, Peking University
+* September 2019 - Januray 2020: Co-organizer of Astro-Night (weekly), Peking University
