@@ -35,17 +35,17 @@ Publications
   
 Collaboration
 ======
-* The Dark Energy Spectroscopic Instrument (DESI, [Link](https://www.desi.lbl.gov/)): Member
-* JWST EREBUS collaboration for studying black holes in the early universe: Member
 * JWST+ALMA ASPIRE collaboration ([Link](https://aspire-quasar.github.io/)): Member
+* JWST EREBUS collaboration for studying black holes in the early universe: Member
 * China Space Station Telescope (CSST) PKU Science Center: Member
+* The Dark Energy Spectroscopic Instrument (DESI, [Link](https://www.desi.lbl.gov/)): Member
 
 Awards and Honors
 ======
-* 2020-2021: The President’s PhD Scholarship (校长奖学金, top 5% Ph. D student in PKU) and Merit Student (校三好学生)
-* 2021-2022: The President’s PhD Scholarship, the First Price Scholarship (校一等奖), and Merit Student
-* 2022-2023: **Chinese National Scholarship** (国家奖学金, top 1% Ph. D student in China) and Merit Student
 * 2023-2024: The First Price Scholarship and Merit Student 
+* 2022-2023: **Chinese National Scholarship** (国家奖学金, top 1% Ph. D student in China) and Merit Student
+* 2021-2022: The President’s PhD Scholarship, the First Price Scholarship (校一等奖), and Merit Student
+* 2020-2021: The President’s PhD Scholarship (校长奖学金, top 5% Ph. D student in PKU) and Merit Student (校三好学生)
 
 Talks
 ======
