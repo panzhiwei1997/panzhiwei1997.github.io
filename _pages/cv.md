@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Full version 
+Full Version 
 =====
 * Click here for [CV](../assets/Curriculum_Vitae.pdf). 
 
