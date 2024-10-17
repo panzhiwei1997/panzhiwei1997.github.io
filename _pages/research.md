@@ -1,12 +1,14 @@
 ---
 layout: archive
-title: "Research"
+title: ""
 permalink: /research/
 author_profile: true
 ---
 
 {% include base_path %}
 
-Full version 
+High-redshift Universe
 =====
-* Click here for . 
+A major focus of my research is the identification and study of high redshift quasars and galaxies, including their spectroscopic surveys and the investigation of their intrinsic physical properties. My research is divided into two main areas: the study of high-redshift quasars ([Pan et al. 2022](https://ui.adsabs.harvard.edu/abs/2022ApJ...928..172P/abstract)) amd the study of high-redshift galaxies ([Fu et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240105920F/abstract)).
+
+
