@@ -33,7 +33,7 @@ Publications
  * Total citations: >700
  * Number of publications: 17
   
-Collaboration
+Collaborations
 ======
 * JWST+ALMA ASPIRE collaboration ([Link](https://aspire-quasar.github.io/)): Member
 * JWST EREBUS collaboration for studying black holes in the early universe: Member
