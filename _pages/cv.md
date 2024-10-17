@@ -50,7 +50,7 @@ Awards and Honors
 Talks
 ======
 * May 2023: "Quasar Luminosity Function & Single-Epoch Black Hole Mass Estimation", **invited talk** at the DoA special seminar of Tsinghua University (Beijing, China)
-* December 2022: "Quasar UV Luminosity Function at 3.5<z<5.0 from SDSS Deep Imaging Data", talk (**First price**) at the ninth forum of Physics Five Universities，the National Top  (Beijing, China)
+* December 2022: "Quasar UV Luminosity Function at 3.5<z<5.0 from SDSS Deep Imaging Data", talk (**First Price**) at the ninth forum of Physics Five Universities，the National Top  (Beijing, China)
 * November 2022: "Overview of the Dark Energy Spectroscopic instrument (DESI): from Survey to Science", talk at the CSST AGN & Galaxy Discussion of Peking University (Beijing, China)
 * June 2022: "The slitless spectroscopy science with emission (absorptions) lines", talk at the CSST AGN & Galaxy Discussion of Peking University (Beijing, China)
 * May 2021: "Overview of Quasar Luminosity Function", talk at the CSST AGN & Galaxy Discussion of Peking University (Beijing, China)
