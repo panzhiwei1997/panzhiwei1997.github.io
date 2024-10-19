@@ -66,3 +66,7 @@ Teaching and Outreach
 * September 2020 - January 2021: Teaching Assistant in the Fundamental Astronomy, Peking University
 * September 2019 - January 2020: Co-organizer of Astro-Night (weekly), Peking University
 * September 2015 - present: Have given 5+ talks to the general public including high-school students and school children.
+
+Service
+======
+* 2022-2023: the First Price Scholarship (校一等奖), and Merit Student (校三好学生)
