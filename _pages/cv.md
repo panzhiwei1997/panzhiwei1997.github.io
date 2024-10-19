@@ -69,4 +69,4 @@ Teaching and Outreach
 
 Service
 ======
-* April 2021: served two shifts (eight nights) as Data Quality Scientist for DESI Survey Validation
+* April 2021: Data Quality Scientist for DESI Survey Validation in two shifts (eight nights)
