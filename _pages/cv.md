@@ -69,4 +69,4 @@ Teaching and Outreach
 
 Service
 ======
-* 2022-2023: the First Price Scholarship (校一等奖), and Merit Student (校三好学生)
+* April 2021: served two shifts (eight nights) as Data Quality Scientist for DESI Survey Validation
