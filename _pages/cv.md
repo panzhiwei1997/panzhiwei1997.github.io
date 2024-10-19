@@ -69,4 +69,5 @@ Teaching and Outreach
 
 Service
 ======
+* 2021-2022: Visual Identification of spectra for DESI Survey Validation 
 * April 2021: Data Quality Scientist for DESI Survey Validation in two shifts (eight nights)
