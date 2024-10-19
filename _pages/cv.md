@@ -49,7 +49,7 @@ Awards and Honors
 
 Talks
 ======
-* September 2023: "Quasar Census:Luminosity Function & Black Hole Mass Estimation", talk at the Chinese Astronomical Society 2023 Annual Meeting (Weihai, China)
+* September 2023: "Quasar Census:Luminosity Function & Black Hole Mass Estimation", talk at the Chinese Astronomical Society 2023 Annual Meeting (Weihai, China)
 * July 2023: "Black Hole Mass Estimation for DESI Quasars at 0.25<𝑧<0.8", talk at the Academic Seminar on Multi-wavelength Studies of Quasars and Active Galactic Nuclei (Lijiang, China)
 * May 2023: "Quasar Luminosity Function & Single-Epoch Black Hole Mass Estimation", **invited talk** at the DoA special seminar of Tsinghua University (Beijing, China)
 * December 2022: "Quasar UV Luminosity Function at 3.5<z<5.0 from SDSS Deep Imaging Data", talk (**First Price**) at the ninth forum of Physics Five Universities, the National Top  (Beijing, China)
