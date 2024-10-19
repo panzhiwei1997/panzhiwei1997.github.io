@@ -22,7 +22,7 @@ Education
 Research Interests
 ======
 * Observational astronomy on extragalactic objects
-  * High-redshift quasars and cosmic reionization
+  * High-redshift quasars and the cosmic reionization
   * Supermassive black hole and its host galaxy
   * Low-redshift (1<z<3) quasars and AGNs
 * Data mining and machine learning
@@ -60,7 +60,8 @@ Talks
 Teaching and Outreach
 ======
 * August 2023: Advisor of the 2023 Outstanding High School Students Summer School (Astronomy), Peking University
-* September 2021 - June 2023: Co-organizer of CSST AGN & Galaxy Discussion (weekly), Peking University
 * July 2022 - August 2022: Teaching Assistant in the summer school of CSST-related AGN & Galaxy Science, Peking University
-* September 2020 - Januray 2021: Teaching Assistant in the Fundamental Astronomy, Peking University
-* September 2019 - Januray 2020: Co-organizer of Astro-Night (weekly), Peking University
+* September 2021 - June 2023: Co-organizer of CSST AGN & Galaxy Discussion (weekly), Peking University
+* September 2020 - January 2021: Supervising an undergraduate student, Peking University
+* September 2020 - January 2021: Teaching Assistant in the Fundamental Astronomy, Peking University
+* September 2019 - January 2020: Co-organizer of Astro-Night (weekly), Peking University
