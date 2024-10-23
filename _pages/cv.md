@@ -59,6 +59,7 @@ Talks
  
 Teaching and Outreach
 ======
+* May 2024 - Present: Product advisor for the popularization of astronomy at the Shanghai Science and Technology Museum.
 * August 2023: Advisor of the 2023 Outstanding High School Students Summer School (Astronomy), Peking University
 * July 2022 - August 2022: Teaching Assistant in the summer school of CSST-related AGN & Galaxy Science, Peking University
 * September 2021 - June 2023: Co-organizer of CSST AGN & Galaxy Discussion (weekly), Peking University
