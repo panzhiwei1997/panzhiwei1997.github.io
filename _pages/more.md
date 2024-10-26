@@ -7,14 +7,16 @@ author_profile: true+
 
 {% include base_path %}
 
-My Wife 
+Hobbies & Interests
+=====
+Badminton, board games, singing, science fiction, and strategy games.
+
+Family Life
 =====
 <figure>
-  <img src="../images/wife.png" alt="My Wife">
-  <figcaption>Photo taken in a hutong in Beijing.</figcaption>
+  <img src="../images/wife.jpg" alt="My Wife">
+  <figcaption>My wife and I.</figcaption>
 </figure>
-
-
 
 Useful Websites for Astronomers
 =====
