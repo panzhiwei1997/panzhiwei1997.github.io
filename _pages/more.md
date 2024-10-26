@@ -14,17 +14,17 @@ Badminton, board games, singing, science fiction, and strategy games.
 Family Life
 =====
 <figure>
-  <img src="../images/family.jpg" alt="My family">
+  <img src="../images/family.jpg" alt="My family" width="50%" height="50%">
   <figcaption>My family.</figcaption>
 </figure>
 
 <figure>
-  <img src="../images/wife.jpg" alt="My Wife">
+  <img src="../images/wife.jpg" alt="My Wife" width="50%" height="50%">
   <figcaption>My wife and I.</figcaption>
 </figure>
 
 <figure>
-  <img src="../images/dog.jpg" alt="My dog">
+  <img src="../images/dog.jpg" alt="My dog" width="40%" height="40%">
   <figcaption>My dog.</figcaption>
 </figure>
 
