@@ -14,8 +14,18 @@ Badminton, board games, singing, science fiction, and strategy games.
 Family Life
 =====
 <figure>
+  <img src="../images/family.jpg" alt="My family">
+  <figcaption>My family.</figcaption>
+</figure>
+
+<figure>
   <img src="../images/wife.jpg" alt="My Wife">
   <figcaption>My wife and I.</figcaption>
+</figure>
+
+<figure>
+  <img src="../images/dog.jpg" alt="My dog">
+  <figcaption>My dog.</figcaption>
 </figure>
 
 Useful Websites for Astronomers
