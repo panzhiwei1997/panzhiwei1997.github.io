@@ -9,10 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-Full Version 
+CV
 =====
-* Click here for [CV](../assets/cv.pdf). 
-
+* Click here for [Full English Version](../assets/cv.pdf). 
+* Click here for [Chinese Version](../assets/中文CV_for铁一中.pdf).
+ 
 Education
 ======
 * 2025 (expected): Ph.D. in Department of Astronomy, Peking University, China
