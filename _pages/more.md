@@ -14,7 +14,7 @@ Badminton, board games, singing, science fiction, and strategy games.
 Family Life
 =====
 <figure>
-  <img src="../images/family.jpg" alt="My family" width="30%" height="30%">
+  <img src="../images/family.jpg" alt="My family" style="width: 30%;">
   <figcaption>My family.</figcaption>
 </figure>
 
