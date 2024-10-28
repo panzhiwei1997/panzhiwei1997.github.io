@@ -9,24 +9,28 @@ author_profile: true+
 
 Hobbies & Interests
 =====
-Badminton, board games, singing, science fiction, and strategy games.
+- Badminton: Lv.4-5
+- Board Games: Brettspiel (e.g., Terraforming Mars, Through the Ages, Agricola)
+- Popular Music: Cantopop  
+- Science Fiction: The Three-Body Problem
+- PC Games : strategy games (e.g., Civilization) and card games (e.g., Hearthstone)
 
 Family Life
 =====
 <center>
   <img src="../images/family.jpg" alt="My family" style="width:50%;">
-  <p style="text-align: center;">My family.</p>
+  <p style="text-align: center;">My family</p>
 </center>
 
-<figure>
-  <img src="../images/wife.jpg" alt="My Wife" width="30%" height="30%">
-  <figcaption>My wife and I.</figcaption>
-</figure>
+<center>
+  <img src="../images/wife.jpg" alt="My Wife" style="width:50%;">
+  <p style="text-align: center;">My wife and I</p>
+</center>
 
-<figure>
-  <img src="../images/dog.jpg" alt="My dog" width="20%" height="20%">
-  <figcaption>My dog.</figcaption>
-</figure>
+<center>
+  <img src="../images/dog.jpg" alt="My Dog" style="width:40%;">
+  <p style="text-align: center;">My dog</p>
+</center>
 
 Useful Websites for Astronomers
 =====
