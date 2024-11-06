@@ -32,7 +32,7 @@ Publications
 ======
  * h index: 8
  * Total citations: >700
- * Number of publications: 17
+ * Number of publications: 18
   
 Collaborations
 ======
