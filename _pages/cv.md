@@ -11,7 +11,7 @@ redirect_from:
 
 CV
 =====
-* Click here for [Full English Version](../assets/cv.pdf). 
+* Click here for [Full English Version](../assets/cv_pzw.pdf). 
 * Click here for [Chinese Version](../assets/中文CV_for铁一中.pdf).
  
 Education
@@ -31,7 +31,7 @@ Research Interests
 Publications 
 ======
  * h index: 9
- * Total citations: >700
+ * Total citations: >800
  * Number of publications: 19
   
 Collaborations
@@ -44,8 +44,8 @@ Collaborations
 Awards and Honors
 ======
 * 2022-2023: the First Price Scholarship (校一等奖), and Merit Student (校三好学生)
-* 2021-2022: **Chinese National Scholarship** (国家奖学金, top 1% Ph. D student in China) and Merit Student
-* 2020-2021: The President’s PhD Scholarship (校长奖学金, top 5% Ph. D student in PKU), The First Price Scholarship, and Merit Student
+* 2021-2022: **Chinese National Scholarship** (国家奖学金, top 1% Ph. D student) and Merit Student
+* 2020-2021: The President’s PhD Scholarship (校长奖学金, top 5% Ph. D student), The First Price Scholarship, and Merit Student
 * 2019-2020: The President’s PhD Scholarship, Merit Student
 
 Talks
@@ -58,18 +58,19 @@ Talks
 * June 2022: "The slitless spectroscopy science with emission (absorptions) lines", talk at the CSST AGN & Galaxy Discussion of Peking University (Beijing, China)
 * May 2021: "Overview of Quasar Luminosity Function", talk at the CSST AGN & Galaxy Discussion of Peking University (Beijing, China)
  
-Teaching and Outreach
+Service and Teaching
+======
+* September 2021 - June 2023: Co-organizer of CSST AGN & Galaxy Discussion (weekly), Peking University
+* July 2022 - August 2022: Teaching Assistant in the summer school of CSST-related AGN & Galaxy Science, Peking University
+* December 2019 - August 20222: Visual Identification of spectra for DESI Survey Validation
+* April 2021: Data Quality Scientist for DESI Survey Validation in two shifts (eight nights)
+* September 2020 - January 2021: Supervising an undergraduate student, Peking University
+* September 2020 - January 2021: Teaching Assistant in the Fundamental Astronomy, Peking University
+
+
+Outreach
 ======
 * May 2024 - Present: Consultant for astronomy popularization products at the Shanghai Science and Technology Museum
 * August 2023: Advisor of the 2023 Outstanding High School Students Summer School (Astronomy), Peking University
-* July 2022 - August 2022: Teaching Assistant in the summer school of CSST-related AGN & Galaxy Science, Peking University
-* September 2021 - June 2023: Co-organizer of CSST AGN & Galaxy Discussion (weekly), Peking University
-* September 2020 - January 2021: Supervising an undergraduate student, Peking University
-* September 2020 - January 2021: Teaching Assistant in the Fundamental Astronomy, Peking University
 * September 2019 - January 2020: Co-organizer of Astro-Night (weekly), Peking University
 * September 2015 - present: Have given 5+ talks to the general public including high-school students and school children.
-
-Service
-======
-* 2021-2022: Visual Identification of spectra for DESI Survey Validation 
-* April 2021: Data Quality Scientist for DESI Survey Validation in two shifts (eight nights)
