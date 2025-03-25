@@ -30,9 +30,9 @@ Research Interests
 
 Publications 
 ======
- * h index: 10
- * Total citations: >900
- * Number of publications: 19
+ * h index: 11
+ * Total citations: >1000
+ * Number of publications: 20
   
 Collaborations
 ======
