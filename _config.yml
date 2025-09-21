@@ -25,11 +25,11 @@ author:
   avatar           : "PZW.jpg"
   name             : "Zhiwei Pan (潘志伟)"
   pronouns         : # example: "he/his"  
-  bio              : "A postgraduate student in astrophysics at KIAA"
-  location         : "Beijing, China"
-  employer         : "Peking University"
+  bio              : "A postdoctoral researcher in astrophysics at UIUC"
+  location         : "Urbana, Illinois, USA"
+  employer         : "University of Illinois Urbana-Champaign"
   uri              : # URL
-  email            : "panzhiwei@pku.edu.cn" 
+  email            : "zhiweip@illinois.edu" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
