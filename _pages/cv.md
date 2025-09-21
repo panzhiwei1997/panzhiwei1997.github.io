@@ -16,7 +16,7 @@ CV
  
 Education
 ======
-* 2025 (expected): Ph.D. in Department of Astronomy, Peking University, China
+* 2025: Ph.D. in Department of Astronomy, Peking University, China
 * 2019: B.S. in Department of Astronomy, Peking University, China
 
   
@@ -30,9 +30,9 @@ Research Interests
 
 Publications 
 ======
- * h index: 11
- * Total citations: >1000
- * Number of publications: 20
+ * h index: 13
+ * Total citations: >1400
+ * Number of publications: 23
   
 Collaborations
 ======
