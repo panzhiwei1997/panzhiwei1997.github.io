@@ -11,9 +11,11 @@ Hobbies & Interests
 =====
 - Badminton: Lv.4-5
 - Board Games: Brettspiel (e.g., Terraforming Mars, Through the Ages, Agricola)
+- Pokemon
 - Popular Music: Cantopop  
 - Science Fiction: The Three-Body Problem
 - PC Games : strategy games (e.g., Civilization) and card games (e.g., Hearthstone)
+
 
 Family Life
 =====
