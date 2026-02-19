@@ -26,20 +26,23 @@ Research Interests
   * High-redshift quasars and the cosmic reionization
   * Supermassive black hole and its host galaxy
   * Low-redshift (1<z<3) quasars and AGNs
+  * Little red dots (LRDs)
 * Data mining and machine learning
 
 Publications 
 ======
- * h index: 13
- * Total citations: >1400
- * Number of publications: 23
+ * h index: 14
+ * Total citations: >2000
+ * Number of publications: 27
   
 Collaborations
 ======
+* JWST NEXUS collaboration: Member
 * JWST+ALMA ASPIRE collaboration ([Link](https://aspire-quasar.github.io/)): Member
 * JWST EREBUS collaboration for studying black holes in the early universe: Member
-* China Space Station Telescope (CSST) PKU Science Center: Member
 * The Dark Energy Spectroscopic Instrument (DESI, [Link](https://www.desi.lbl.gov/)): Member
+* China Space Station Telescope (CSST) PKU Science Center: Member
+
 
 Awards and Honors
 ======
