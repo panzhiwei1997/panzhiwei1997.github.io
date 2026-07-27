@@ -40,6 +40,7 @@ def ads_search(token: str, query: str, rows: int, sort: str) -> list[dict]:
         "page",
         "pubdate",
         "citation_count",
+        "bibstem",
     ]
     params = urllib.parse.urlencode(
         {
@@ -62,9 +63,11 @@ def ads_search(token: str, query: str, rows: int, sort: str) -> list[dict]:
     return payload.get("response", {}).get("docs", [])
 
 
-def ads_library_bibcodes(token: str, library_id: str) -> list[str]:
+def ads_library_bibcodes(token: str, library_id: str, rows: int) -> list[str]:
+    url = ADS_LIBRARY_URL.format(library_id=urllib.parse.quote(library_id))
+    url += "?" + urllib.parse.urlencode({"raw": "true", "rows": rows})
     req = urllib.request.Request(
-        ADS_LIBRARY_URL.format(library_id=urllib.parse.quote(library_id)),
+        url,
         headers={"Authorization": f"Bearer {token}"},
     )
     try:
@@ -74,7 +77,14 @@ def ads_library_bibcodes(token: str, library_id: str) -> list[str]:
         detail = exc.read().decode("utf-8", errors="replace")
         raise SystemExit(f"ADS library API error {exc.code}: {detail}") from exc
     documents = payload.get("documents", [])
-    return [item["bibcode"] if isinstance(item, dict) else item for item in documents]
+    bibcodes = [item["bibcode"] if isinstance(item, dict) else item for item in documents]
+    expected = int(payload.get("num_documents") or payload.get("number_of_documents") or 0)
+    if expected and len(bibcodes) < expected:
+        raise SystemExit(
+            f"ADS library returned {len(bibcodes)} of {expected} documents; "
+            "increase ads.rows or check ADS API pagination."
+        )
+    return bibcodes
 
 
 def ads_records_for_bibcodes(token: str, bibcodes: list[str], sort: str) -> list[dict]:
@@ -107,14 +117,13 @@ def format_author(name: str) -> str:
     if "," not in name:
         return name
     last, rest = [part.strip() for part in name.split(",", 1)]
-    initials = []
-    for token in rest.replace("-", " - ").split():
-        if token == "-":
-            if initials:
-                initials[-1] += "-"
-            continue
-        initials.append(token[0].upper() + ".")
-    return f"{last}, {' '.join(initials)}"
+    parts = []
+    for token in rest.split():
+        if "-" in token:
+            parts.append("-".join(piece[0].upper() + "." for piece in token.split("-") if piece))
+        else:
+            parts.append(token[0].upper() + ".")
+    return f"{last}, {' '.join(parts)}"
 
 
 def emphasize_author(name: str, match_names: list[str]) -> str:
@@ -151,14 +160,25 @@ def page_value(doc: dict) -> str:
     return ""
 
 
+def journal_name(doc: dict) -> str:
+    bibstems = doc.get("bibstem") or []
+    if bibstems:
+        return str(bibstems[0])
+    pub = str(doc.get("pub", ""))
+    if pub == "arXiv e-prints":
+        return "arXiv"
+    return pub
+
+
 def publication_line(doc: dict, cfg: dict) -> str:
     authors = format_authors(
         doc.get("author") or [],
         cfg["author"]["match_names"],
         cfg["formatting"]["max_authors_before_ellipsis"],
     )
-    title = html.escape((doc.get("title") or ["Untitled"])[0])
-    pieces = [authors, str(doc.get("year", "")), html.escape(doc.get("pub", ""))]
+    title = html.escape(html.unescape((doc.get("title") or ["Untitled"])[0]))
+    pub = journal_name(doc)
+    pieces = [authors, str(doc.get("year", "")), html.escape(pub)]
     if doc.get("volume"):
         pieces.append(html.escape(str(doc["volume"])))
     page = page_value(doc)
@@ -239,7 +259,7 @@ def main() -> int:
         raise SystemExit("Set ADS_TOKEN to a NASA ADS API token.")
 
     if cfg["ads"].get("library_id"):
-        bibcodes = ads_library_bibcodes(token, cfg["ads"]["library_id"])
+        bibcodes = ads_library_bibcodes(token, cfg["ads"]["library_id"], int(cfg["ads"].get("rows", 200)))
         docs = ads_records_for_bibcodes(token, bibcodes, cfg["ads"].get("sort", "date desc"))
     else:
         docs = ads_search(
