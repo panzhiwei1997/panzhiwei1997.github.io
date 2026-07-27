@@ -1,0 +1,27 @@
+ads:
+  # Prefer the curated ADS public library over a broad author search.
+  library_id: "XOt86MFXRpWIMKx5p6L1CQ"
+  # Fallback query if library_id is removed.
+  query: 'author:"Pan, Zhiwei" OR author:"Pan, Z"'
+  rows: 200
+  sort: "date desc"
+
+site:
+  publications_page: "_pages/publications.html"
+  managed_region_start: "<!-- PUBLICATIONS:START -->"
+  managed_region_end: "<!-- PUBLICATIONS:END -->"
+
+author:
+  display_name: "Pan, Z."
+  match_names:
+    - "Pan, Zhiwei"
+    - "Pan, Z."
+    - "Pan, Z"
+    - "Zhiwei Pan"
+
+formatting:
+  max_authors_before_ellipsis: 4
+  include_stats: true
+  h_index: 14
+  first_second_heading: "First and Second Authored Publications"
+  other_heading: "Other Publications"

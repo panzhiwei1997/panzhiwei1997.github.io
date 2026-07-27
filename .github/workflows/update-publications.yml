@@ -1,0 +1,36 @@
+name: Update publications
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 14 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install pyyaml
+
+      - name: Update publications from ADS
+        env:
+          ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
+        run: python scripts/update_publications.py --write
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: codex/update-publications
+          title: "Update publications from ADS"
+          commit-message: "Update publications from ADS"
+          body: "Automated publication refresh from NASA ADS."
