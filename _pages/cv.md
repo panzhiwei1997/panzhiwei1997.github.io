@@ -33,8 +33,8 @@ Publications
 ======
 <!-- PUBLICATIONS_STATS:START -->
  * h index: 14
- * Total citations: >2000
- * Number of publications: 27
+ * Total citations: >2500
+ * Number of publications: 36
 <!-- PUBLICATIONS_STATS:END -->
   
 Collaborations
