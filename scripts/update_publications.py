@@ -18,6 +18,8 @@ from pathlib import Path
 
 ADS_SEARCH_URL = "https://api.adsabs.harvard.edu/v1/search/query"
 ADS_LIBRARY_URL = "https://api.adsabs.harvard.edu/v1/biblib/libraries/{library_id}"
+ADS_BIBCODE_QUERY_CHUNK_SIZE = 20
+ADS_LIBRARY_PAGE_SIZE = 200
 
 
 def load_yaml(path: Path) -> dict:
@@ -63,26 +65,46 @@ def ads_search(token: str, query: str, rows: int, sort: str) -> list[dict]:
     return payload.get("response", {}).get("docs", [])
 
 
-def ads_library_bibcodes(token: str, library_id: str, rows: int) -> list[str]:
+def ads_library_page(token: str, library_id: str, rows: int, start: int) -> dict:
     url = ADS_LIBRARY_URL.format(library_id=urllib.parse.quote(library_id))
-    url += "?" + urllib.parse.urlencode({"raw": "true", "rows": rows})
+    url += "?" + urllib.parse.urlencode({"raw": "true", "rows": rows, "start": start})
     req = urllib.request.Request(
         url,
         headers={"Authorization": f"Bearer {token}"},
     )
     try:
         with urllib.request.urlopen(req, timeout=45) as resp:
-            payload = json.load(resp)
+            return json.load(resp)
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="replace")
         raise SystemExit(f"ADS library API error {exc.code}: {detail}") from exc
-    documents = payload.get("documents", [])
-    bibcodes = [item["bibcode"] if isinstance(item, dict) else item for item in documents]
-    expected = int(payload.get("num_documents") or payload.get("number_of_documents") or 0)
+
+
+def ads_library_bibcodes(token: str, library_id: str, rows: int) -> list[str]:
+    page_size = max(1, min(rows, ADS_LIBRARY_PAGE_SIZE))
+    bibcodes: list[str] = []
+    seen: set[str] = set()
+    expected = 0
+    start = 0
+    while True:
+        payload = ads_library_page(token, library_id, page_size, start)
+        expected = int(payload.get("num_documents") or payload.get("number_of_documents") or expected or 0)
+        documents = payload.get("documents", [])
+        page_bibcodes = [item["bibcode"] if isinstance(item, dict) else item for item in documents]
+        for bibcode in page_bibcodes:
+            if bibcode not in seen:
+                bibcodes.append(bibcode)
+                seen.add(bibcode)
+        if not expected or len(bibcodes) >= expected:
+            break
+        if not page_bibcodes:
+            break
+        start += page_size
+
     if expected and len(bibcodes) < expected:
         raise SystemExit(
             f"ADS library returned {len(bibcodes)} of {expected} documents; "
-            "increase ads.rows or check ADS API pagination."
+            "check ADS API pagination."
         )
     return bibcodes
 
@@ -90,8 +112,26 @@ def ads_library_bibcodes(token: str, library_id: str, rows: int) -> list[str]:
 def ads_records_for_bibcodes(token: str, bibcodes: list[str], sort: str) -> list[dict]:
     if not bibcodes:
         return []
-    quoted = " OR ".join(f'"{bibcode}"' for bibcode in bibcodes)
-    return ads_search(token, f"bibcode:({quoted})", len(bibcodes), sort)
+    records_by_bibcode: dict[str, dict] = {}
+    for idx in range(0, len(bibcodes), ADS_BIBCODE_QUERY_CHUNK_SIZE):
+        chunk = bibcodes[idx : idx + ADS_BIBCODE_QUERY_CHUNK_SIZE]
+        query = " OR ".join(f'bibcode:"{bibcode}"' for bibcode in chunk)
+        for doc in ads_search(token, query, len(chunk), sort):
+            if doc.get("bibcode"):
+                records_by_bibcode[doc["bibcode"]] = doc
+
+    missing = [bibcode for bibcode in bibcodes if bibcode not in records_by_bibcode]
+    if missing:
+        raise SystemExit(
+            f"ADS returned metadata for {len(records_by_bibcode)} of {len(bibcodes)} "
+            "library records. Missing bibcodes: "
+            + ", ".join(missing)
+        )
+
+    docs = list(records_by_bibcode.values())
+    if sort.strip().lower() in {"date desc", "pubdate desc"}:
+        docs.sort(key=lambda doc: (str(doc.get("pubdate", "")), str(doc.get("year", "")), doc["bibcode"]), reverse=True)
+    return docs
 
 
 def normalize_name(name: str) -> str:
