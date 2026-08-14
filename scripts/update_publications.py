@@ -235,11 +235,23 @@ def is_first_or_second_author(doc: dict, match_names: list[str]) -> bool:
     return any(author_matches(author, match_names) for author in authors[:2])
 
 
+def publication_stats(docs: list[dict]) -> dict:
+    citation_counts = sorted((int(doc.get("citation_count") or 0) for doc in docs), reverse=True)
+    h_index = sum(1 for idx, citation_count in enumerate(citation_counts, 1) if citation_count >= idx)
+    total_citations = sum(citation_counts)
+    return {
+        "h_index": h_index,
+        "total_citations": total_citations,
+        "publication_count": len(docs),
+        "citation_floor": (total_citations // 100) * 100,
+    }
+
+
 def render_publications(docs: list[dict], cfg: dict) -> str:
     match_names = cfg["author"]["match_names"]
     first_second = [doc for doc in docs if is_first_or_second_author(doc, match_names)]
     other = [doc for doc in docs if doc not in first_second]
-    total_citations = sum(int(doc.get("citation_count") or 0) for doc in docs)
+    stats = publication_stats(docs)
 
     lines: list[str] = []
     if cfg["formatting"].get("include_stats", True):
@@ -252,9 +264,9 @@ def render_publications(docs: list[dict], cfg: dict) -> str:
         lines.extend(
             [
                 '{% if site.author.googlescholar %}',
-                f'  <div class="wordwrap"> h index: {cfg["formatting"].get("h_index", 14)}</div>',
-                f'  <div class="wordwrap"> Total citations: >{(total_citations // 100) * 100}</div>',
-                f'  <div class="wordwrap"> Number of publications: {len(docs)} </div> '
+                f'  <div class="wordwrap"> h index: {stats["h_index"]}</div>',
+                f'  <div class="wordwrap"> Total citations: >{stats["citation_floor"]}</div>',
+                f'  <div class="wordwrap"> Number of publications: {stats["publication_count"]} </div> '
                 f'(Please find my publications on <a href="{library_url}">my ADS library</a>)',
                 "{% endif %}",
                 "",
@@ -273,15 +285,34 @@ def render_publications(docs: list[dict], cfg: dict) -> str:
     return "\n".join(lines)
 
 
-def update_page(original: str, rendered: str, cfg: dict) -> str:
-    start = cfg["site"]["managed_region_start"]
-    end = cfg["site"]["managed_region_end"]
+def render_cv_stats(docs: list[dict]) -> str:
+    stats = publication_stats(docs)
+    return "\n".join(
+        [
+            f' * h index: {stats["h_index"]}',
+            f' * Total citations: >{stats["citation_floor"]}',
+            f' * Number of publications: {stats["publication_count"]}',
+            "",
+        ]
+    )
+
+
+def replace_managed_region(original: str, rendered: str, start: str, end: str) -> str:
     block = f"{start}\n{rendered}{end}"
     if start in original and end in original:
         pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.S)
         return pattern.sub(lambda _: block, original)
+    raise SystemExit(f"Could not find managed markers: {start} / {end}")
+
+
+def update_page(original: str, rendered: str, cfg: dict) -> str:
+    start = cfg["site"]["managed_region_start"]
+    end = cfg["site"]["managed_region_end"]
+    if start in original and end in original:
+        return replace_managed_region(original, rendered, start, end)
     frontmatter = re.match(r"(?s)\A---\n.*?\n---\n", original)
     if frontmatter:
+        block = f"{start}\n{rendered}{end}"
         return original[: frontmatter.end()].rstrip() + "\n\n" + block + "\n"
     raise SystemExit("Could not find managed markers or YAML front matter.")
 
@@ -309,10 +340,12 @@ def main() -> int:
             cfg["ads"].get("sort", "date desc"),
         )
     rendered = render_publications(docs, cfg)
+    rendered_cv_stats = render_cv_stats(docs)
 
     if args.output:
         Path(args.output).write_text(rendered, encoding="utf-8")
 
+    changed_paths: list[Path] = []
     page_path = Path(cfg["site"]["publications_page"])
     if not page_path.exists():
         print(rendered)
@@ -320,12 +353,32 @@ def main() -> int:
 
     original = page_path.read_text(encoding="utf-8")
     updated = update_page(original, rendered, cfg)
-    if updated == original:
+    if updated != original:
+        changed_paths.append(page_path)
+    if args.write and updated != original:
+        page_path.write_text(updated, encoding="utf-8")
+
+    cv_page = cfg["site"].get("cv_page")
+    if cv_page:
+        cv_path = Path(cv_page)
+        cv_original = cv_path.read_text(encoding="utf-8")
+        cv_updated = replace_managed_region(
+            cv_original,
+            rendered_cv_stats,
+            cfg["site"]["cv_stats_region_start"],
+            cfg["site"]["cv_stats_region_end"],
+        )
+        if cv_updated != cv_original:
+            changed_paths.append(cv_path)
+        if args.write and cv_updated != cv_original:
+            cv_path.write_text(cv_updated, encoding="utf-8")
+
+    if not changed_paths:
         print("No publication changes.")
         return 0
     if args.write:
-        page_path.write_text(updated, encoding="utf-8")
-        print(f"Updated {page_path} on {dt.date.today().isoformat()}.")
+        changed = ", ".join(str(path) for path in changed_paths)
+        print(f"Updated {changed} on {dt.date.today().isoformat()}.")
     else:
         print(updated)
     return 0
