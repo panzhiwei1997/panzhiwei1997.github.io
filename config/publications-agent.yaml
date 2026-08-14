@@ -8,8 +8,11 @@ ads:
 
 site:
   publications_page: "_pages/publications.html"
+  cv_page: "_pages/cv.md"
   managed_region_start: "<!-- PUBLICATIONS:START -->"
   managed_region_end: "<!-- PUBLICATIONS:END -->"
+  cv_stats_region_start: "<!-- PUBLICATIONS_STATS:START -->"
+  cv_stats_region_end: "<!-- PUBLICATIONS_STATS:END -->"
 
 author:
   display_name: "Pan, Z."
