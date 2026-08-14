@@ -239,7 +239,7 @@ def update_page(original: str, rendered: str, cfg: dict) -> str:
     block = f"{start}\n{rendered}{end}"
     if start in original and end in original:
         pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.S)
-        return pattern.sub(block, original)
+        return pattern.sub(lambda _: block, original)
     frontmatter = re.match(r"(?s)\A---\n.*?\n---\n", original)
     if frontmatter:
         return original[: frontmatter.end()].rstrip() + "\n\n" + block + "\n"
