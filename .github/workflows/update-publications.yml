@@ -8,10 +8,17 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  pages: write
+
+concurrency:
+  group: update-publications
+  cancel-in-progress: false
 
 jobs:
   update-publications:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -28,9 +35,52 @@ jobs:
         run: python scripts/update_publications.py --write
 
       - name: Open pull request
+        id: publications-pr
         uses: peter-evans/create-pull-request@v6
         with:
+          add-paths: |
+            _pages/publications.html
+            _pages/cv.md
           branch: codex/update-publications
           title: "Update publications from ADS"
           commit-message: "Update publications from ADS"
           body: "Automated publication refresh from NASA ADS."
+
+      - name: Merge publication update
+        if: steps.publications-pr.outputs.pull-request-number != ''
+        uses: actions/github-script@v7
+        env:
+          PUBLICATIONS_PR: ${{ steps.publications-pr.outputs.pull-request-number }}
+          PUBLICATIONS_SHA: ${{ steps.publications-pr.outputs.pull-request-head-sha }}
+        with:
+          script: |
+            const repo = context.repo;
+            const pull_number = Number(process.env.PUBLICATIONS_PR);
+            const { data: pr } = await github.rest.pulls.get({ ...repo, pull_number });
+            if (pr.head.repo.full_name !== pr.base.repo.full_name ||
+                pr.head.ref !== 'codex/update-publications' || pr.base.ref !== 'master' ||
+                pr.head.sha !== process.env.PUBLICATIONS_SHA) {
+              throw new Error('Publication PR branch or commit does not match this run.');
+            }
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              ...repo, pull_number, per_page: 100
+            });
+            const allowed = new Set(['_pages/publications.html', '_pages/cv.md']);
+            if (!files.length || files.some(file =>
+                !allowed.has(file.filename) || file.status !== 'modified')) {
+              throw new Error('Publication PR contains unexpected file changes; review manually.');
+            }
+            const { data: result } = await github.rest.pulls.merge({
+              ...repo, pull_number, sha: pr.head.sha, merge_method: 'merge'
+            });
+            if (!result.merged) throw new Error(result.message);
+            core.info(`Merged publication PR #${pull_number}: ${result.sha}`);
+
+      # GITHUB_TOKEN merges do not trigger the normal Pages build.
+      # Request on no-change runs too, so a failed build request can be retried.
+      - name: Request Pages build
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data } = await github.rest.repos.requestPagesBuild(context.repo);
+            core.info(`Pages build requested: ${data.status}`);
