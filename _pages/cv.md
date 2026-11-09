@@ -33,7 +33,7 @@ Publications
 ======
 <!-- PUBLICATIONS_STATS:START -->
  * h index: 16
- * Total citations: >3200
+ * Total citations: >3100
  * Number of publications: 37
 <!-- PUBLICATIONS_STATS:END -->
   
